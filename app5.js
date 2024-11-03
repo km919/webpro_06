@@ -42,20 +42,20 @@ app.get("/janken", (req, res) => {
   else cpu = 'パー';
 
   let judgement = '';
-  if (hand === cpu) {
+  if (hand === cpu) { // ユーザーの手とCPUの手が同じ場合は「引き分け」。
     judgement = '引き分け';
-  } else if (
+  } else if ( // ユーザーが勝つ組み合わせの場合は「勝ち」とし、winを1増加する。
     (hand === 'グー' && cpu === 'チョキ') ||
     (hand === 'チョキ' && cpu === 'パー') ||
     (hand === 'パー' && cpu === 'グー')
   ) {
     judgement = '勝ち';
     win += 1; 
-  } else {
+  } else { // それ以外は「負け」
     judgement = '負け';
   }
 
-  total += 1; 
+  total += 1; //  ゲームが終了したので、総試行数totalを1増加させる。
 
   const display = {
     your: hand,
