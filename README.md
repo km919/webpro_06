@@ -2,8 +2,8 @@
 2024 10/29
 
 
+# webpro_06
 2024 11/05
-
 
 ```javascript
 console.log( 'Hello' );
@@ -30,7 +30,7 @@ if -->|yes| win
 win --> end1
 if -->|no| loose
 ```
-# webpro_06
+
 ファイル名 | 説明 
 -|-
 app5.js | プログラム本体 
