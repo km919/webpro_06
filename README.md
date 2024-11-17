@@ -196,3 +196,17 @@ http://localhost:8080/hello1
 flowchart TD;
 開始 --> 2種類の挨拶を表示 --> 終了;
 ```
+
+・hello2  
+前述の起動手順を終えた後，最後に表示を確認した方のターミナルに   
+GET /hello2 HTTP/1.1  
+Host: localhost  
+と入力し，改行してからエンターキーを押す．
+これでプログラムそのものは起動するので，ブラウザで  
+http://localhost:8080/hello2  
+と入力すれば出力結果を見ることができる．  
+以下，hello2のフローチャートである．
+```mermaid
+flowchart TD;
+開始 --> 2種類の挨拶を表示 --> 終了;
+```
