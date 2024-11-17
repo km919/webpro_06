@@ -110,11 +110,6 @@ app.get("/janken", (req, res) => {
   res.render('janken', display);  
 });  
 
-
-
-
-// 以下11/17に追記  
-
 app.get("/chohan", (req, res) => {  
   const choices = ["丁", "半"];  
   
@@ -140,10 +135,6 @@ app.get("/chohan", (req, res) => {
   });  
 });  
 
-
-
-
-
 app.get("/taste", (req, res) => {  
   // ユーザーの選択を取得（クエリパラメータから）  
   const choice = req.query.choice;  
@@ -155,12 +146,6 @@ app.get("/taste", (req, res) => {
   // 結果をテンプレートに渡す  
   res.render("taste", { choice: choice, taste: taste });  
 });
-
-
-
-
-
-
 
 app.listen(8080, () => console.log("Example app listening on port 8080!"));  
 
