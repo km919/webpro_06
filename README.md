@@ -42,9 +42,13 @@ janken.ejs | じゃんけん開始の画面で表示される文字
 ## app5.js 全体のドキュメント（レポート課題）
 
 app.get("/hello1", (req, res) => {
+
   const message1 = "Hello world";
+
   const message2 = "Bon jour";
+
   res.render('show', { greet1:message1, greet2:message2});
+  
 });
 
 この
