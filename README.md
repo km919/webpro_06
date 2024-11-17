@@ -304,7 +304,7 @@ http://localhost:8080/chohan
 flowchart TD;
 start["開始"];
 end1["終了"]
-if{"グー，チョキ，パーのどれを出すか"}
+if{"か"}
 start --> if
 if --> |グー|　勝ち判定が出る
 勝ち判定が出る --> 勝利数と試合回数が加算される --> end1
