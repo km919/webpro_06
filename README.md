@@ -149,6 +149,26 @@ app.get("/taste", (req, res) => {
 
 app.listen(8080, () => console.log("Example app listening on port 8080!"));  
 
+  
+上記のapp5.jsについて説明する．
+app5.jsは7つの機能を持ち，それぞれ hello1，hello2，icon，luck，janken，chohan，taste となっている．
+これらの機能を起動する方法はそれぞれ異なるが，一部共通している箇所があるので最初にそれを説明する．  
+まずターミナルを開き，app5.jsが入っているディレクトリに移動する．
+移動後"node app5.js"と入力し，  
+Example app listening on port 8080!  
+という表示を確認する．  
+次に別のターミナルを開き，"telnet localhost 8080"と入力し，  
+Trying ::1...  
+Connected to localhost.  
+Escape character is '^]'.  
+という表示を確認する．  
+ここまでが7つの機能全てに共通する箇所である．以下，各機能ごとに起動方法と，機能そのものを説明していく．
+
+hello1  
+前述の起動手順を終えた後，  
+GET /hello1 HTTP/1.1  
+Host: localhost  
+と入力し，改行してからエンターキーを押す．
 
 
 
