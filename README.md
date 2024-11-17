@@ -41,6 +41,7 @@ janken.ejs | じゃんけん開始の画面で表示される文字
 
 ## app5.js 全体のドキュメント（レポート課題）
 以下，app5.jsの全文  
+```javascript
 const express = require("express");  
 const app = express();  
 
@@ -148,7 +149,7 @@ app.get("/taste", (req, res) => {
 });
 
 app.listen(8080, () => console.log("Example app listening on port 8080!"));  
-
+```
   
 上記のapp5.jsについて説明する．
 app5.jsは7つの機能を持ち，それぞれ hello1，hello2，icon，luck，janken，chohan，taste となっている．
@@ -164,11 +165,13 @@ Escape character is '^]'.
 という表示を確認する．  
 ここまでが7つの機能全てに共通する箇所である．以下，各機能ごとに起動方法と，機能そのものを説明していく．
 
-hello1  
+・hello1  
 前述の起動手順を終えた後，  
 GET /hello1 HTTP/1.1  
 Host: localhost  
 と入力し，改行してからエンターキーを押す．
+これでプログラムそのものは起動するので，ブラウザで"http://localhost:8080/hello1"と入力すれば出力結果を見ることができる．  
+このプログラムは"Message"という見出しを表示し，その下に"挨拶1：Hello world"，"挨拶2：Bon jour"と表示する機能となっている．
 
 
 
