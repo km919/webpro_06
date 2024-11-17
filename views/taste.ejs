@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一個だけハズレのあのお菓子</title>
+</head>
+<body>
+  <h1>一個だけハズレのあのお菓子</h1>
+
+  <!-- ユーザーが選んだ位置を表示 -->
+  <p>あなたが選んだ位置: <strong><%= choice %></strong></p>
+
+  <!-- ランダムに生成された結果を表示 -->
+  <p>その味は: <strong><%= taste %></strong></p>
+
+  <!-- 再挑戦ボタン -->
+  <button onclick="window.location.href='/taste?choice=左'">左を選ぶ</button>
+  <button onclick="window.location.href='/taste?choice=真ん中'">真ん中を選ぶ</button>
+  <button onclick="window.location.href='/taste?choice=右'">右を選ぶ</button>
+</body>
+</html>

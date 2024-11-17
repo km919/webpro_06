@@ -64,9 +64,56 @@ app.get("/janken", (req, res) => {
     win: win,
     total: total
   };
-
   res.render('janken', display);
 });
+
+
+
+
+// 以下11/17に追記
+
+app.get("/chohan", (req, res) => {
+  const choices = ["丁", "半"];
+  
+  // ランダムにサーバーの選択を決定
+  const serverChoice = choices[Math.floor(Math.random() * 2)];
+  
+  // クエリパラメータからユーザーの選択を取得
+  const userChoice = req.query.choice;
+  
+  // 勝敗判定
+  let outcome = '';
+  if (userChoice === serverChoice) {
+    outcome = '勝ち';
+  } else {
+    outcome = '負け';
+  }
+
+  // `chohan.ejs`にデータを渡してレンダリング
+  res.render('chohan', {
+    userChoice: userChoice,
+    serverChoice: serverChoice,
+    outcome: outcome
+  });
+});
+
+
+
+
+
+app.get("/taste", (req, res) => {
+  // ユーザーの選択を取得（クエリパラメータから）
+  const choice = req.query.choice;
+
+  // 3分の1の確率で「酸っぱい」、3分の2の確率で「甘い」
+  const randomValue = Math.random();
+  const taste = randomValue < 1 / 3 ? "酸っぱい" : "甘い";
+
+  // 結果をテンプレートに渡す
+  res.render("taste", { choice: choice, taste: taste });
+});
+
+
 
 
 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>丁半博打</title>
+</head>
+<body>
+  <h1>丁半博打の結果</h1>
+
+  <!-- ユーザーの選択 -->
+  <p>あなたの選択: <strong><%= userChoice %></strong></p>
+
+  <!-- サーバーの選択 -->
+  <p>サーバーの選択: <strong><%= serverChoice %></strong></p>
+
+  <!-- 勝敗 -->
+  <h2><%= outcome %></h2>
+
+  <!-- 再挑戦ボタン -->
+  <button onclick="window.location.href='/chohan?choice=丁'">丁を選ぶ</button>
+  <button onclick="window.location.href='/chohan?choice=半'">半を選ぶ</button>
+</body>
+</html>
