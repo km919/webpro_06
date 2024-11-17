@@ -238,9 +238,13 @@ http://localhost:8080/luck
 flowchart TD;
 start["開始"];
 end1["終了"]
-if{"条件に合うか"}
-win["勝ち"]
-loose["負け"]
+if{"1~6のどの数字が出るか"}
+1["大吉"]
+2["中吉"]
+3["小吉"]
+4["吉"]
+5["凶"]
+6["大凶"]
 start --> if
 if -->|yes| win
 win --> end1
