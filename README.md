@@ -170,7 +170,9 @@ Escape character is '^]'.
 GET /hello1 HTTP/1.1  
 Host: localhost  
 と入力し，改行してからエンターキーを押す．
-これでプログラムそのものは起動するので，ブラウザで"http://localhost:8080/hello1"と入力すれば出力結果を見ることができる．  
+これでプログラムそのものは起動するので，ブラウザで  
+http://localhost:8080/hello1  
+と入力すれば出力結果を見ることができる．  
 このプログラムは"Message"という見出しを表示し，その下に"挨拶1：Hello world"，"挨拶2：Bon jour"と表示する機能となっている．
 
 
