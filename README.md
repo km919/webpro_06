@@ -40,7 +40,7 @@ janken.ejs | じゃんけん開始の画面で表示される文字
 ## ファイル一覧
 
 ## app5.js 全体のドキュメント（レポート課題）
-
+以下，app5.jsの全文  
 const express = require("express");  
 const app = express();  
 
