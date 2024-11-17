@@ -41,32 +41,11 @@ janken.ejs | じゃんけん開始の画面で表示される文字
 
 ## app5.js 全体のドキュメント（レポート課題）
 
-app.get("/hello1", (req, res) => {
-
-  const message1 = "Hello world";
-
-  const message2 = "Bon jour";
-
-  res.render('show', { greet1:message1, greet2:message2});
-  
-});
-
+app.get("/hello1", (req, res) => {  
+  const message1 = "Hello world";  
+  const message2 = "Bon jour";  
+  res.render('show', { greet1:message1, greet2:message2});  
+});  
 この
 
 
-
-
-```mermaid
-app.get("/hello2", (req, res) => {
-  res.render('show', { greet1:"Hello world", greet2:"Bon jour"});
-});
-```
-
-
-
-
-```mermaid
-app.get("/icon", (req, res) => {
-  res.render('icon', { filename:"./public/Apple_logo_black.svg", alt:"Apple Logo"});
-});
-```
