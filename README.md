@@ -46,6 +46,6 @@ app.get("/hello1", (req, res) => {
   const message2 = "Bon jour";  
   res.render('show', { greet1:message1, greet2:message2});  
 });  
-この
+
 
 
