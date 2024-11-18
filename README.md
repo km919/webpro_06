@@ -39,6 +39,8 @@ janken.ejs | じゃんけん開始の画面で表示される文字
 ## このプログラムについて
 ## ファイル一覧
 
+
+
 ## app5.js 全体のドキュメント（レポート課題）
 以下，app5.jsの全文  
 ```javascript
@@ -86,20 +88,20 @@ app.get("/janken", (req, res) => {
   else cpu = 'パー';  
 
   let judgement = '';  
-  if (hand === cpu) { // ユーザーの手とCPUの手が同じ場合は「引き分け」。  
+  if (hand === cpu) { 
     judgement = '引き分け';  
-  } else if ( // ユーザーが勝つ組み合わせの場合は「勝ち」とし、winを1増加する。  
+  } else if (
     (hand === 'グー' && cpu === 'チョキ') ||  
     (hand === 'チョキ' && cpu === 'パー') ||  
     (hand === 'パー' && cpu === 'グー')  
   ) {  
     judgement = '勝ち';  
     win += 1;   
-  } else { // それ以外は「負け」  
+  } else { 
     judgement = '負け';  
   }  
 
-  total += 1; //  ゲームが終了したので、総試行数totalを1増加させる。  
+  total += 1;
 
   const display = {  
     your: hand,  
@@ -113,22 +115,18 @@ app.get("/janken", (req, res) => {
 
 app.get("/chohan", (req, res) => {  
   const choices = ["丁", "半"];  
-  
-  // ランダムにサーバーの選択を決定  
+   
   const serverChoice = choices[Math.floor(Math.random() * 2)];  
   
-  // クエリパラメータからユーザーの選択を取得  
   const userChoice = req.query.choice;  
   
-  // 勝敗判定  
   let outcome = '';  
   if (userChoice === serverChoice) {  
     outcome = '勝ち';  
   } else {  
     outcome = '負け';  
   }  
-
-  // `chohan.ejs`にデータを渡してレンダリング  
+ 
   res.render('chohan', {  
     userChoice: userChoice,  
     serverChoice: serverChoice,  
@@ -136,15 +134,11 @@ app.get("/chohan", (req, res) => {
   });  
 });  
 
-app.get("/taste", (req, res) => {  
-  // ユーザーの選択を取得（クエリパラメータから）  
-  const choice = req.query.choice;  
-
-  // 3分の1の確率で「酸っぱい」、3分の2の確率で「甘い」  
+app.get("/taste", (req, res) => {    
+  const choice = req.query.choice;   
   const randomValue = Math.random();  
   const taste = randomValue < 1 / 3 ? "酸っぱい" : "甘い";  
 
-  // 結果をテンプレートに渡す  
   res.render("taste", { choice: choice, taste: taste });  
 });
 
