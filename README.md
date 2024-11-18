@@ -329,4 +329,5 @@ http://localhost:8080/taste
 flowchart TD;
 start["開始"];
 end1["終了"]
+if{"左，真ん中，右のどれかを選ぶ"}
 ```
