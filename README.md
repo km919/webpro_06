@@ -295,7 +295,7 @@ http://localhost:8080/chohan
 と入力すれば出力結果を見ることができる．  
 以下，chohanのフローチャートである．
 ```mermaid
-
+flowchart TD
     start["開始"]
     end1["終了"]
     if{"丁か半かを選ぶ"}
