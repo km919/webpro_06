@@ -151,17 +151,17 @@ app.listen(8080, () => console.log("Example app listening on port 8080!"));
 app5.js    |webpro_06| プログラム本体 
 hello1     |-| 2種類の挨拶を表示するプログラム
 hello2     |-| 2種類の挨拶を表示するプログラム
-show.ejs   || hello1とhello2の，表示されるときのタイトルや形式を設定する
+show.ejs   |views| hello1とhello2の，表示されるときのタイトルや形式を設定する
 icon       |-| 埋め込まれたURLの画像を表示するプログラム  
-icon.ejs   || iconの，画像が表示されるときのタイトル等を設定する
+icon.ejs   |views| iconの，画像が表示されるときのタイトル等を設定する
 luck       |-| 大吉や大凶などが出るおみくじで遊べるプログラム
-luck.ejs   || 大吉や大凶などを表示する形式を設定する
+luck.ejs   |views| 大吉や大凶などを表示する形式を設定する
 janken     |-| 自分とコンピューターでじゃんけんができるプログラム
-janken.ejs || 自分とコンピューターの出す手や，自分の勝利回数の表示形式を設定する
+janken.ejs |views| 自分とコンピューターの出す手や，自分の勝利回数の表示形式を設定する
 chohan     |-| コンピューターと丁半で遊べるプログラム
-chohan.ejs || 自分とコンピューターの選択や，勝ち負けの結果の表示形式を設定する
+chohan.ejs |views| 自分とコンピューターの選択や，勝ち負けの結果の表示形式を設定する
 taste      |-| 3個中1個だけ酸っぱいあのお菓子を擬似的に楽しめるプログラム
-taste.ejs  || タイトルや，酸っぱいかどうかの結果の表示形式を設定する
+taste.ejs  |views| タイトルや，酸っぱいかどうかの結果の表示形式を設定する
 
 上記のapp5.jsについて説明する．
 app5.jsは7つの機能を持ち，それぞれ hello1，hello2，icon，luck，janken，chohan，taste となっている．
